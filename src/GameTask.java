@@ -9,6 +9,7 @@ public class GameTask {
         char[] str = new char[]{'L', 'R', 'F', 'F', 'L', 'R'};
 
         List<String> list = new ArrayList<>();
+        //unique positions
         Set<Integer> set = new HashSet<>();
 
         IntStream.range(0, str.length).forEach(i -> {

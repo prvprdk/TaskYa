@@ -27,7 +27,7 @@ public class GFG {
         });
     }
 
-    static void permutationHeap(Number[] array, int n) {
+    static <T> void permutationHeap(T[] array, int n) {
 
         if (n == 1) System.out.println(Arrays.toString(array));
         else {
@@ -51,21 +51,21 @@ public class GFG {
 
         System.out.println(Arrays.toString(array));
 
-        while (key > 0){
+        while (key > 0) {
             shift(array, key);
-            if (array[key] != key){
+            if (array[key] != key) {
                 System.out.println(Arrays.toString(array));
                 key = ch;
 
-            }else key--;
+            } else key--;
 
         }
 
 
     }
 
-    static void swap(Number[] array, int a, int b) {
-        Number temp = array[a];
+    static <T> void swap(T[] array, int a, int b) {
+        T temp = array[a];
         array[a] = array[b];
         array[b] = temp;
     }
@@ -73,9 +73,7 @@ public class GFG {
     static void shift(int[] array, int key) {
         int temp = array[0];
 
-        IntStream.range(0, key).forEach(i -> {
-            array[i] = array[i + 1];
-        });
+        IntStream.range(0, key).forEach(i -> array[i] = array[i + 1]);
         array[key] = temp;
 
     }
