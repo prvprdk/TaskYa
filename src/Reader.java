@@ -37,6 +37,7 @@ public class Reader {
             // next step we`ll might call method
             // Segments.nonIntersecting(ar, ar2);
 
+
         } catch (Exception e) {
             e.printStackTrace();
         }
